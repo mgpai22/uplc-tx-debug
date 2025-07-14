@@ -1,0 +1,11 @@
+[package]
+name = "uplc-debug"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# c3a7fba28232341dd5b3e60854c99a6f2c2a6c77 is the local checkout of aiken
+uplc_1_1_17 = { package = "uplc", path = "./aiken/crates/uplc", default-features = false }
+# below is latest not 1.1.17
+# uplc_1_1_17 = { package = "uplc", git = "https://github.com/aiken-lang/aiken.git", rev = "25e12d84f6fa0cc22a5c8ae0699bf7dd129ef8ba", default-features = false }
+hex = "0.4.3"
