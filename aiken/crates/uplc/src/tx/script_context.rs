@@ -518,7 +518,6 @@ pub fn get_tx_in_info_v1(
 ) -> Result<Vec<TxInInfo>, Error> {
     inputs
         .iter()
-        .sorted()
         .map(|input| {
             let utxo = match utxos.iter().find(|utxo| utxo.input == *input) {
                 Some(resolved) => resolved,
@@ -567,7 +566,6 @@ pub fn get_tx_in_info_v2(
 ) -> Result<Vec<TxInInfo>, Error> {
     inputs
         .iter()
-        .sorted()
         .map(|input| {
             let utxo = match utxos.iter().find(|utxo| utxo.input == *input) {
                 Some(resolved) => resolved,
